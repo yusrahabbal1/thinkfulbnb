@@ -88,28 +88,34 @@ header nav ul li a:hover {
   text-decoration: none;
 }
 
-/* -------  Search Form ------- */
+/* ------- Search Form ------- */
 form {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
   border: 2px solid #ff385c;
-  
+  padding: 20px; /* Add padding for spacing */
 }
 
 form label {
   font-weight: bold;
+  margin-bottom: 10px; /* Add margin below labels */
 }
 
 form div {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column; /* Change to column layout for label-input pairs */
+  align-items: center; /* Center horizontally */
+  margin-bottom: 20px; /* Add margin between form elements */
+  padding-right: 30px;
 }
 
 form select,
 form input {
-  margin-bottom: 20px;
-  width: 65%;
+  width: 100%; /* Use full width for input fields */
+  padding: 10px; /* Add padding for spacing */
+  margin: 5px 0; /* Add margin to separate form elements */
 }
 
 form button {
