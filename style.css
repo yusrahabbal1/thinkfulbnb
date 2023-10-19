@@ -2,11 +2,6 @@
 
 body {
   font-family: "Lato", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
 }
 
 h2 {
@@ -95,6 +90,7 @@ header nav ul li a:hover {
 form {
   border: 2px solid #ff385c;
   padding: 10px;
+  display: flex;
 }
 
 form label {
