@@ -73,6 +73,7 @@ header {
 
 header nav ul li {
   list-style-type: none;
+  display: flex;
 }
 
 header nav ul li a {
@@ -90,6 +91,8 @@ header nav ul li a:hover {
 form {
   border: 2px solid #ff385c;
   padding: 10px;
+  flex-direction: column;
+  align-items: center;
 }
 
 form label {
@@ -124,7 +127,7 @@ footer p {
 }
 
 /* -------  Media Query ------- */
-@media screen and (min-width: 769px) {
+/*@media screen and (min-width: 769px) {
   .logo {
     margin-right: 20px; 
   }
@@ -132,4 +135,48 @@ footer p {
     display: inline;
   }
 
+}
+*/
+@media screen and (min-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    nav ul {
+        flex-direction: row;
+    }
+
+    nav li {
+        padding: 0 10px;
+    }
+
+    #form {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    label {
+        width: 45%;
+    }
+
+    input[type="text"], input[type="date"], select {
+        width: 45%;
+        margin: 5px;
+    }
+
+    #about p {
+        width: 50%;
+        text-align: center;
+    }
+
+    #ideas img {
+        width: 50%;
+    }
+
+    #host p {
+        width: 50%;
+        text-align: center;
+    }
 }
