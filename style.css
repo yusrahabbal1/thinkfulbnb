@@ -7,13 +7,13 @@ body {
 h2 {
   font-size: 26px;
   font-weight: 400;
-  margin: 0 10px 10px 10px;
+  margin: 10px 10px 0px 10px;
   text-align: center;
 }
 
 h3 {
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 800;
 }
 
 p {
@@ -21,31 +21,22 @@ p {
   margin: 0;
 }
 
-section {
-  padding: 20px;
-}
-
 section.alternate-background {
   background-color: #00a699;
   color: #fff;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+main img {
+  width: 100%;
 }
 
-main img {
-  width: 100px;
-}
-.conatiner{
-  text-align: center;
-}
 /* ---  Groups & Items --- */
 
 .group {
   display: flex;
   flex-direction: column;
+  padding: 20px;
+
 }
 
 .item {
@@ -55,6 +46,7 @@ main img {
 
 .item-double {
   flex: 2;
+
 }
 
 /* -------  Navigation ------- */
@@ -71,9 +63,18 @@ header {
   color: #fff;
 }
 
+header nav {
+  display: flex;
+  justify-content: center;
+}
+
+header nav ul {
+  display: flex;
+  padding-left: 0;
+}
+
 header nav ul li {
   list-style-type: none;
-  display: flex;
 }
 
 header nav ul li a {
@@ -89,20 +90,26 @@ header nav ul li a:hover {
 
 /* -------  Search Form ------- */
 form {
-  border: 2px solid #ff385c;
-  padding: 10px;
+  display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+  border: 2px solid #ff385c;
+  
 }
 
 form label {
   font-weight: bold;
 }
 
+form div {
+  display: flex;
+  justify-content: space-between;
+}
+
 form select,
 form input {
   margin-bottom: 20px;
-  width: 180px;
+  width: 65%;
 }
 
 form button {
@@ -127,56 +134,67 @@ footer p {
 }
 
 /* -------  Media Query ------- */
-/*@media screen and (min-width: 769px) {
+
+@media all and (min-width: 480px) {
+  p {
+    font-size: 14px;
+  }
+  header {
+    display: flex;
+  }
+  header nav {
+    flex: 1;
+    justify-content: flex-end;
+  }
+
+  header nav ul {
+    justify-content: right;
+  }
+
   .logo {
-    margin-right: 20px; 
+    font-size: 42px;
   }
-  #menu li {
-    display: inline;
+  form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-direction: wrap;
   }
-
-}
-*/
-@media screen and (min-width: 768px) {
-    header {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    nav ul {
-        flex-direction: row;
-    }
-
-    nav li {
-        padding: 0 10px;
-    }
-
-    #form {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-    }
-
-    label {
-        width: 45%;
-    }
-
-    input[type="text"], input[type="date"], select {
-        width: 45%;
-        margin: 5px;
-    }
-
-    #about p {
-        width: 50%;
-        text-align: center;
-    }
-
-    #ideas img {
-        width: 50%;
-    }
-
-    #host p {
-        width: 50%;
-        text-align: center;
-    }
+  form div {
+    flex: 1;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  form button {
+    flex: 1;
+  }
+  .group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #ideas .group {
+    min-height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  #ideas div {
+    display: flex;
+    flex-basis: calc(50% - 40px);
+    justify-content: center;
+    flex-direction: column;
+  }
+  .host{
+    flex-direction: column;
+    justify-content: center;
+  }
+ body {
+   display: grid;
+ }
+ .host-list {
+  font-size: 14px;
+ }
 }
