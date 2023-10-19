@@ -2,6 +2,11 @@
 
 body {
   font-family: "Lato", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
 h2 {
@@ -38,7 +43,9 @@ img {
 main img {
   width: 100px;
 }
-
+.conatiner{
+  text-align: center;
+}
 /* ---  Groups & Items --- */
 
 .group {
