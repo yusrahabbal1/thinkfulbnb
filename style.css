@@ -157,71 +157,50 @@ footer p {
 
 /* -------  Media Query ------- */
 
-@media all and (min-width: 768px) {     
-  p {
-    font-size: 14px;
-  }
-  header {
-    display: flex;
-  }
-  header nav {
-    flex: 1;
-    justify-content: flex-end;
-  }
-
-  header nav ul {
-    justify-content: right;
-  }
-
-  .logo {
-    font-size: 42px;
-  }
-  form {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    flex-direction: wrap;
-  }
-  form div {
-    flex: 1;
-    align-content: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-  form button {
-    flex: 1;
-  }
-  .group {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
-  #ideas .group {
-    min-height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-  }
-  #ideas div {
-    display: flex;
-    flex-basis: calc(50% - 40px);
-    justify-content: center;
-    flex-direction: column;
-  }
-  .host{
-    flex-direction: column;
-    justify-content: center;
-  }
- body {
-   display: grid;
- }
- .host-list {
-  font-size: 14px;
- }
+@media all and (min-width: 768px) {
+/* header */
+header {
+display: flex;
+justify-content: space-between;
+padding: 15px;
 }
-
-@media screen and (min-width: 768px) {
-p {
-  font-size: 16px; 
+header nav {
+display: flex;
+align-items: center;
+}
+header nav ul {
+padding: 0;
+}
+/* form */
+form {
+display: flex;
+justify-content: space-between;
+}
+form div {
+display: flex;
+flex-direction: column;
+justify-content: center;
+margin: 0 10px;
+width: 20%;
+}
+form div input,
+form div select {
+margin-bottom: 0;
+}
+form select,
+form input {
+width: 100%;
+}
+/* about */
+.group {
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+}
+.container {
+display: flex;
+gap: 15px;
+}
+.container .box {
+flex: 1;}
 }
